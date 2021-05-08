@@ -1,0 +1,78 @@
+$gray-100: #1a1a1a !default;
+$gray-300: #323232 !default;
+$gray-400: #4c4c4c !default;
+$gray-500: #555759 !default;
+$gray-600: #666666 !default;
+$gray-700: #747474 !default;
+$gray-900: #999999 !default;
+
+$blue: #0364FF !default;
+$red: #e54c2e !default;
+$green: #3cb355 !default;
+$yellow: #ffa526 !default;
+
+// 辅助 color
+$primary: $blue !default;
+$danger: $red !default;
+$success: $green !default;
+$warning: $yellow !default;
+$border: #ced1d9 !default;
+$background: #ebedf2 !default;
+$navBackground: $gray-500 !default;
+
+// 文字色
+$white: #fff !default;
+$link: $blue !default;
+$darkColor: $gray-300 !default;
+$grayColor: $gray-400 !default;
+$darkGreyColor: $gray-600 !default;
+$lightColor: $gray-900 !default;
+
+$iconColor: #8f9bb3 !default;
+
+$font-family-zh: 微软雅黑 !default;
+$font-family-en: Arial "Helvetica Neue" sans-serif !default;
+$font-family-banner: 思源黑体 !default;
+$font-family-st: '宋体' !default;
+
+$font-size24: 24px !default;
+$font-size20: 20px !default;
+$font-size18: 18px !default;
+$font-size16: 16px !default;
+$font-size14: 14px !default;
+$font-size12: 12px !default;
+
+$line-height24: 40px !default;
+$line-height20: 32px !default;
+$line-height18: 28px !default;
+$line-height16: 24px !default;
+$line-height14: 22px !default;
+$line-height12: 20px !default;
+
+// 确保被禁用的文本框也能看清
+$--disabled-color-base: $gray-400;
+
+$space: 4px !default;
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-base: $font-weight-normal !default;
+
+$borderRadius: 2px !default;
+
+//sidebar
+$menuBorder: #ced1d9;
+$menuText: #bfcbd9;
+$menuActiveText: $link;
+$subMenuActiveText: $link; //https://github.com/ElemeFE/element/issues/12951
+
+$menuBg: #304156;
+$menuHover: #f5f6fa;
+
+// 字菜单背景颜色
+$subMenuBg: #f5f6fa;
+$subMenuHover: $link;
+
+// 侧边栏宽度
+$sideBarWidth: 202px;

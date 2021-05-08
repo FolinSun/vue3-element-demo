@@ -1,0 +1,122 @@
+body {
+  font-size: $font-size14;
+  height: 100%;
+  line-height: 1.5;
+  color: #212529;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei,
+    Arial, sans-serif, PingFang SC;
+}
+
+body.windows-nt ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+body.windows-nt ::-webkit-scrollbar-track-piece {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.windows-nt ::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 5px;
+}
+
+body.windows-nt ::-webkit-scrollbar-thumb:horizontal:hover,
+body.windows-nt ::-webkit-scrollbar-thumb:vertical:hover {
+  background: #aaa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label {
+  margin: 0;
+}
+
+html {
+  font-size: $font-size14;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+a:focus,
+a:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ' ';
+    clear: both;
+    height: 0;
+  }
+}
+
+::-ms-clear,
+::-ms-reveal {
+  display: none;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: $gray-900;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: $gray-900;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: $gray-900;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: $gray-900;
+}
