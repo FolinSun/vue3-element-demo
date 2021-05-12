@@ -11,6 +11,8 @@ const { VUE_APP_PORT, NODE_ENV, VUE_APP_MOCK, VUE_APP_BASE_URL } = process.env;
 module.exports = {
   publicPath: '/',
   productionSourceMap: false,
+  // 支持template选项
+  runtimeCompiler: true,
   // 设置为true时，此选项将绕过主机检查。不建议这样做，因为不检查主机的应用容易受到DNS重新绑定攻击的攻击。
   // disableHostCheck: false,
   devServer: {
@@ -69,19 +71,6 @@ module.exports = {
     // when there are many pages, it will cause too many meaningless requests
     config.plugins.delete('prefetch');
 
-    //svgo Rule
-    config.module
-      .rule('svgo')
-      .test(/\.svg$/)
-      .include.add(resolve('src/icons'))
-      .end()
-      .use('svgo-loader')
-      .loader('svgo-loader')
-      .options({
-        // externalConfig 配置特殊不是相对路径，起始路径是根目录
-        externalConfig: './src/icons/svgo.yml',
-      });
-
     // set svg-sprite-loader
     // 内置的 svg Rule 添加 exclude
     config.module.rule('svg').exclude.add(resolve('src/icons')).end();
@@ -96,5 +85,18 @@ module.exports = {
         symbolId: 'icon-[name]',
       })
       .end();
+
+    //svgo Rule
+    config.module
+      .rule('svgo')
+      .test(/\.svg$/)
+      .include.add(resolve('src/icons'))
+      .end()
+      .use('svgo-loader')
+      .loader('svgo-loader')
+      .options({
+        // externalConfig 配置特殊不是相对路径，起始路径是根目录
+        externalConfig: './src/icons/svgo.yml',
+      });
   },
 };

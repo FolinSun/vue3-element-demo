@@ -32,10 +32,10 @@ const basicRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/Home',
+    redirect: '/home',
     children: [
       {
-        path: 'Home',
+        path: 'home',
         name: 'Home',
         meta: {
           title: '首页',

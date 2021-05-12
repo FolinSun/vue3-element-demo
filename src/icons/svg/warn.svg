@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #535875;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="组_267" data-name="组 267" transform="translate(-474.958 -402.681)">
+    <path id="路径_171" data-name="路径 171" class="cls-1" d="M479.557,426.418V415.05a7.4,7.4,0,0,1,7.2-7.58h0a7.4,7.4,0,0,1,7.2,7.58v11.368" transform="translate(1.2 1.263)"/>
+    <line id="直线_8" data-name="直线 8" class="cls-1" x2="21.6" transform="translate(477.157 427.681)"/>
+    <line id="直线_9" data-name="直线 9" class="cls-1" y2="10.105" transform="translate(484.957 416.944)"/>
+    <line id="直线_10" data-name="直线 10" class="cls-1" y2="5.053" transform="translate(487.957 403.681)"/>
+    <line id="直线_11" data-name="直线 11" class="cls-1" x2="2.897" y2="3.05" transform="translate(479.06 408.21)"/>
+    <line id="直线_12" data-name="直线 12" class="cls-1" x1="2.897" y2="3.05" transform="translate(493.46 408.21)"/>
+    <line id="直线_13" data-name="直线 13" class="cls-1" x2="4.8" transform="translate(475.957 416.312)"/>
+    <line id="直线_14" data-name="直线 14" class="cls-1" x1="4.8" transform="translate(495.157 416.312)"/>
+  </g>
+</svg>
