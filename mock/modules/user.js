@@ -28,7 +28,7 @@ mock[`POST ${VUE_APP_BASE_URL || ''}/user/login`] = (req, res) => {
 };
 
 // 用户信息
-mock[`GET ${VUE_APP_BASE_URL}/user/info`] = (req, res) => {
+mock[`GET ${VUE_APP_BASE_URL || ''}/user/info`] = (req, res) => {
   const headers = req.headers;
   if (headers[ajaxHeadersTokenKey] === 'admin') {
     res.send({

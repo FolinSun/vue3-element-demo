@@ -5,9 +5,7 @@
       <Header />
       <Breadcrumb />
       <router-view />
-      <!-- <transition name="fade"></transition> -->
     </el-main>
-    <!-- <div class="main"></div> -->
   </el-container>
 </template>
 

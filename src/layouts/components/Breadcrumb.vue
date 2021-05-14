@@ -2,7 +2,6 @@
   <div class="breadcrumb">
     <span class="refresh">
       <i class="el-icon-refresh-right"></i>
-      <!-- <svg-icon icon-class="refresh" class-name="icon-refresh" /> -->
     </span>
     <el-divider direction="vertical"></el-divider>
     <router-link :to="{ path: '/' }">

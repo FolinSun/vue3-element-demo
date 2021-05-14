@@ -121,3 +121,27 @@ a:hover {
   /* Internet Explorer 10-11 */
   color: $gray-900;
 }
+
+
+
+.common-block {
+  border: 1px solid #CED1D9;
+  margin-bottom: 0.8rem;
+  background: #fff;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  > .flex + .flex {
+    margin-left: 0.8rem;
+  }
+}
+.flex {
+  flex: 1 1 0;
+}
