@@ -14,7 +14,6 @@
         default: '',
       },
     },
-    setup() {},
     render() {
       const vnodes = [];
       const icon = this.icon;

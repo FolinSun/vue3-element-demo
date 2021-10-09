@@ -1,9 +1,10 @@
-import { get } from 'lodash';
+import { get, cloneDeep } from 'lodash';
 
 window._ = {
   get,
+  cloneDeep,
 };
 
 export default (app) => {
-  app.config.globalProperties.$lodash = { get };
+  app.config.globalProperties.$lodash = { get, cloneDeep };
 };

@@ -60,15 +60,7 @@ export const useGo = (_router) => {
   const go = (opt = '/home', isReplace = false) => {
     if (!opt) return;
 
-    if (isString(opt)) {
-      isReplace
-        ? replace(opt).catch(handleError)
-        : push(opt).catch(handleError);
-    } else {
-      isReplace
-        ? replace(opt).catch(handleError)
-        : push(opt).catch(handleError);
-    }
+    isReplace ? replace(opt).catch(handleError) : push(opt).catch(handleError);
   };
 
   return go;

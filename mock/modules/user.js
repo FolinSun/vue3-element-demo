@@ -73,7 +73,10 @@ mock[`GET ${VUE_APP_BASE_URL || ''}/user/test`] = (req, res) => {
   res.send({
     code: 0,
     msg: 'ok',
-    data: Mock.mock('@integer(0,99)'),
+    data: {
+      id: Mock.mock('@id'),
+      name: Mock.mock('@name')
+    },
   });
 };
 

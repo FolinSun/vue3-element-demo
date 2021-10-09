@@ -3,11 +3,9 @@
     <el-scrollbar wrap-class="scrollbar-wrapper">
       <router-link to="/">logo</router-link>
       <el-menu
-        default-active="1"
+        :default-active="defaultActive"
         class="reset-menu"
         :unique-opened="false"
-        @open="handleOpen"
-        @close="handleClose"
       >
         <div class="menu-group" v-for="nav in navData" :key="nav.id">
           <div class="group-title">{{ nav.name }}</div>
@@ -24,8 +22,9 @@
 </template>
 
 <script>
-  import { defineComponent } from 'vue';
+  import { defineComponent, ref } from 'vue';
   import { useStore } from 'vuex';
+  import { useRoute } from 'vue-router';
   import SidebarItem from './SidebarItem';
 
   export default defineComponent({
@@ -37,18 +36,13 @@
       const store = useStore();
       const navData = store.state.permission.menu;
 
+      const { path } = useRoute();
+      const defaultActive = ref(path);
+
       return {
         navData,
+        defaultActive,
       };
-    },
-    mounted() {},
-    methods: {
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        console.log(key, keyPath);
-      },
     },
   });
 </script>
@@ -96,10 +90,25 @@
           background: $submenubg;
           border-radius: 4px;
           overflow: hidden;
-          .el-submenu__title:hover,
-          .el-submenu__title:focus {
+          .el-submenu__title {
             background: $submenubg;
+            .el-menu-item {
+              &:hover,
+              &:focus {
+                background: none;
+              }
+              &.is-active:hover {
+                background: $activebg;
+              }
+            }
+            &:hover,
+            &:focus {
+              background: $submenubg;
+            }
           }
+        }
+        .el-submenu__title {
+          padding: 0 !important;
         }
         > .el-menu {
           background: $submenubg;
@@ -107,7 +116,8 @@
             display: none;
           }
           .el-menu-item {
-            &:hover {
+            &:hover,
+            &:focus {
               background: $submenubg;
             }
             &.is-active {

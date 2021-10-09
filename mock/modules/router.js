@@ -86,6 +86,7 @@ mock[`GET ${VUE_APP_BASE_URL || ''}/menu`] = (req, res) => {
             id: Mock.mock('@id'),
             path: 'hazardousWork',
             key: 'hazardousWork',
+            noLink: true, // 是否有链接
             name: '危险作业',
             icon: 'icon-2',
           },

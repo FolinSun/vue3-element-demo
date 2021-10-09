@@ -41,7 +41,6 @@
         type: String,
         default: '',
       },
-      // 是否全屏
       full: {
         type: Boolean,
         default: false,
@@ -52,15 +51,13 @@
       const statusMapRef = ref(new Map());
 
       const { query } = useRoute();
-      const go = useGo();
-      const redo = useRedo();
 
       unref(statusMapRef).set(ExceptionEnum.PAGE_NOT_ACCESS, {
         title: '403',
         status: `${ExceptionEnum.PAGE_NOT_ACCESS}`,
         subTitle: exception.subTitle403,
         btnText: props.full ? exception.backLogin : exception.backHome,
-        handler: () => (props.full ? go('/login') : go()),
+        handler: () => (props.full ? useGo('/login') : useGo()),
       });
 
       unref(statusMapRef).set(ExceptionEnum.PAGE_NOT_FOUND, {
@@ -68,7 +65,7 @@
         status: `${ExceptionEnum.PAGE_NOT_FOUND}`,
         subTitle: exception.subTitle404,
         btnText: props.full ? exception.backLogin : exception.backHome,
-        handler: () => (props.full ? go('/login') : go()),
+        handler: () => (props.full ? useGo('/login') : useGo()),
       });
 
       unref(statusMapRef).set(ExceptionEnum.ERROR, {
@@ -76,14 +73,14 @@
         status: `${ExceptionEnum.ERROR}`,
         subTitle: exception.subTitle500,
         btnText: exception.backHome,
-        handler: () => go(),
+        handler: () => useGo(),
       });
 
       unref(statusMapRef).set(ExceptionEnum.NET_WORK_ERROR, {
         title: exception.networkErrorTitle,
         subTitle: exception.networkErrorSubTitle,
         btnText: exception.redo,
-        handler: () => redo(),
+        handler: () => useRedo(),
         icon: 'netWorkSvg',
       });
 
@@ -91,7 +88,7 @@
         title: exception.noDataTitle,
         subTitle: '',
         btnText: exception.redo,
-        handler: () => redo(),
+        handler: () => useRedo(),
         icon: 'notDataSvg',
       });
 

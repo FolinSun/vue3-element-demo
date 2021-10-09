@@ -21,7 +21,14 @@
       popper-append-to-body
     >
       <template #title>
-        <item :icon="menu.icon" :title="menu.name" />
+        <applink v-if="!menu.noLink" :to="resolvePath(menu.path)">
+          <el-menu-item :index="resolvePath(menu.path)">
+            <item :icon="menu.icon" :title="menu.name" />
+          </el-menu-item>
+        </applink>
+        <el-menu-item v-else>
+          <item :icon="menu.icon" :title="menu.name" />
+        </el-menu-item>
       </template>
 
       <sidebar-item
@@ -50,9 +57,9 @@
     },
     props: {
       menu: {
-        type: Array,
+        type: Object,
         default() {
-          return [];
+          return {};
         },
       },
       basePath: {
@@ -96,7 +103,10 @@
         if (isExternal(this.basePath)) {
           return this.basePath;
         }
-        return path.resolve(this.basePath, routePath);
+        return path.resolve(
+          this.basePath,
+          this.basePath === routePath ? '' : routePath
+        );
       },
     },
   });
